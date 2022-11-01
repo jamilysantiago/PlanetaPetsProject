@@ -1,11 +1,10 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import PricingCards from '../components/Pricing'
 import HeroImage from '../components/HeroImage'
 import NavBar from '../components/NavBar'
 import Cadastro from '../components/Form/cadastro'
 
-const Pricing = () => {
+const Singup = () => {
     return (
         <div>
             <NavBar />
@@ -15,4 +14,4 @@ const Pricing = () => {
     )
 }
 
-export default Pricing
+export default Singup;
