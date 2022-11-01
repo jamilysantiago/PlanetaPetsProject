@@ -61,7 +61,7 @@ Planeta Pets is [GLP-3.0 licensed](./LICENSE.md).
 
 ## Acesso ao projeto
 
-Você pode [acessar o código fonte do projeto](https://github.com/idev-company/SuaViagemProject) ou [baixá-lo](https://github.com/idev-company/SuaViagemProject/archive/refs/heads/main.zip).
+Você pode [acessar o código fonte do projeto](https://github.com/idev-company/PlanetaPetsProject) ou [baixá-lo](https://github.com/idev-company/PlanetaPetsProject/archive/refs/heads/main.zip).
 
 
 ## Abrir e rodar o projeto
