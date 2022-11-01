@@ -12,14 +12,9 @@ const Footer = () => {
                 <Link to='/'><img src={logo} alt="Logo" className='logo' /></Link>
                 </div>
                 <div className='right'>
-                    <h4>About the company</h4>
-                    <p>"Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam"</p>
-                    <div className='social'>
-                        <FaGithub size={30} style={{ color: '#ffffff', marginRight: '1rem' }} />
-                    </div>
+                    <h4>Sobre o Projeto</h4>
+                    <p>"Quem não ama cachorros e gatos? Um animalzinho em casa é uma amizade para vida toda! A convivência com pets traz inúmeros benefícios para as pessoas, como: vinculo afetivo, mais alegria em casa e união na família. Mas o maior benefício que a adoção de animais pode nos trazer é a luta contra o abandono. Então, nos da Planeta Pets Project estamos aqui para combater o abandono de animais e ajudar você a encontrar um amigo para toda vida.
+Adoção é uma escolha de amor."</p>
                 </div>
 
             </div>
