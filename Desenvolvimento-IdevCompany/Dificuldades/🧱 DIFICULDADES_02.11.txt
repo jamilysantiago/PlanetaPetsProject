@@ -1,1 +1,0 @@
-Houveram algumas dificuldades no quesito de acessar o CSS de algumas páginas e alterar. Não estava conseguindo mudar a cor do plano de fundo do header e nem do footer da página, eventualmente tudo deu certinho.
