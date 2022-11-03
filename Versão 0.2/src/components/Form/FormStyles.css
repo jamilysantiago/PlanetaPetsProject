@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Work+Sans:400,500,600,700&display=swap');
 
 body{
-  background: rgb(34,193,195);
-  background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+  background-color: #454372;
   font-family: "work sans";
 }
 
 html{
   font-size: 100%;
+  background-color: #454372;
 }
 
 #loginform{
@@ -17,7 +17,7 @@ html{
   width: 30%;
   height: 60%;
   margin: 100px auto;
-  background-color: #FFFFFF;
+  background-color: #454372;
   border-radius: 25px;
 }
 
@@ -27,6 +27,7 @@ html{
   padding: 2rem 0;
   margin: 0;
   font-size: 2rem;
+  background-color: #454372;
 }
 
 .row{
@@ -35,7 +36,7 @@ html{
   align-items: center;
   padding-top: 2rem;
   max-width: 100%;
-  
+  background-color: #454372;
 }
 
 .row input{
@@ -47,6 +48,7 @@ html{
   padding-bottom: 1rem;
   box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
   transition: box-shadow 0.2s ease-in;
+  background-color: #454372;
 }
 
 .row input:focus{

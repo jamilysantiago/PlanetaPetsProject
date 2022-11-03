@@ -25,14 +25,16 @@
 .hero .content h1 {
     font-size: 4rem;
     color: #fff;
+    text-shadow: 2px 2px 4px #00000081;
 }
 
 .hero p {
     font-size: 1.8rem;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 1.6rem;
     color: #fff;
+    text-shadow: 2px 2px 3px #0000003f;
 }
 
 .hero .btn {

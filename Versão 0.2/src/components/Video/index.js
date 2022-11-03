@@ -12,9 +12,9 @@ const Video = () => {
             </video>
             <div className='content'>
                 <h1>Planeta Pets</h1>
-                <p>Adoação é um ato de amor!</p>
+                <p>Adoção é um ato de amor</p>
                 <div>
-                    <Link to='/training' className='btn'>Adote</Link>
+                    <Link to='/adote' className='btn'>Adote</Link>
                     <Link to='/login' className='btn btn-light'>Login</Link>
                 </div>
             </div>

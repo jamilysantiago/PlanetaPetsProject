@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit:wght@100;300;400;500;600;700;800&display=swap');
 
 .header {
     position: fixed;
@@ -6,12 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 2.5rem;
     z-index: 10;
 }
 
 .header-bg {
-    background-color: rgba(0,0,0, .85);
+    background-color: #454372;
     transition: .5s;
 }
 
@@ -30,6 +31,9 @@
 .nav-menu a {
     font-size: 1.2rem;
     font-weight: 500;
+    font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 .hamburger {
@@ -68,6 +72,7 @@
 
     .nav-menu a {
         font-size: 2rem;
+        
     }
 }
 
