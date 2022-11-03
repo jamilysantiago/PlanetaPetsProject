@@ -1,0 +1,10 @@
+Jamily Santiago
+Minha maior dificuldade durante o desenvolvimento do projeto nessa semana é relacionado ao React, pois não tenho todo o conhecimento necessário. 
+Estou literalmente aprendendo enquanto concretizo o projeto, então, consequentemente, é um pouco mais complicado.
+
+Elenilton Junior
+Houveram algumas dificuldades no quesito de acessar o CSS de algumas páginas e alterar. Não estava conseguindo mudar a cor do plano de fundo
+ do header e nem do footer da página, eventualmente tudo deu certinho.
+
+Micael Rodrigues
+A minha dificuldade foi encontrar a melhor forma de inserir banco de dados no projeto, pois tivemos um déficit muito do mesmo assunto no curso.
