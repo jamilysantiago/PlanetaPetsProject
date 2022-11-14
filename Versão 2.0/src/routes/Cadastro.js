@@ -10,6 +10,7 @@ const Singup = () => {
             <NavBar />
             <HeroImage heading='CADASTRO' />
             <Cadastro />
+            <Footer />
         </div>
     )
 }
