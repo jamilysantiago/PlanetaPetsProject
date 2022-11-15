@@ -13,7 +13,7 @@ const Footer = () => {
                 <Link to='/'><img src={logo} alt="Logo" className='logo' /></Link>
                 </div>
                 <div className='right'>
-                    <h4>Sobre o Projeto</h4>
+                    <h4>Planeta Pets</h4>
                     <p>Adoção é uma escolha de amor.</p>
                     <SocialIcon className="social" url="https://github.com/idev-company" /> 
                 </div>
