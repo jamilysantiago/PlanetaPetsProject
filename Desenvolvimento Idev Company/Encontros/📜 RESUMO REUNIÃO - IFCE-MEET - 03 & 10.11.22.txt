@@ -1,0 +1,10 @@
+Foi realizado a apresentação em sala/meet das mudanças realizadas no projeto. Para a próxima reunião;
+
+— Design 
+🔹Logo 
+🔹Cores Definidas
+🔹Personalização das páginas e do projeto como todo.
+
+— Back
+🔹Banco de Dados
+🔹Login/Cadastro/adote/perfil/configurações

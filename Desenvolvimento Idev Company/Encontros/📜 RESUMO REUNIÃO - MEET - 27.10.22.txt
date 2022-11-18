@@ -1,0 +1,9 @@
+Hoje foi realizado a organização para a etapa de desenvolvimento atual do projeto. Para a próxima reunião;
+
+— A dupla de Design & A dupla de Back:
+🔹Personalização e desenvolvimento, AO MÁXIMO, do novo projeto.
+
+- Viviane - Página Inicial (Destaque) e Login/registro
+- Jamily - Página de Adote
+— Micael
+🔹Estudo e teste com banco de dados parta a implementação do novo projeto.

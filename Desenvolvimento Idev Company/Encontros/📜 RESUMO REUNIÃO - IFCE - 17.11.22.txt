@@ -1,0 +1,18 @@
+Hoje foi realizado a apresentação das mudanças realizadas no projeto. Para a próxima reunião;
+
+— A Dupla de Design 
+🔹 Personalização e desenvolvimento AO MÁXIMO do  projeto.
+
+— Micael
+🔹 Nova Navbar e sistema de animais.
+
+— Jamily
+🔹 Entrega do formulário de adoção e conexão com banco de dados
+
+
+— Viviane
+🔹 Entrega pagina de usuário pegando as informações do banco de dados e mostrando na tela
+
+
+
+Obs. Próxima reunião será a entrega parcial final do projeto!
