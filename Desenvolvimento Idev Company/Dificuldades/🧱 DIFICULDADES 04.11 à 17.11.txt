@@ -1,0 +1,13 @@
+Abaixo encontram-se as dificuldades enfrentadas pela equipe e por cada integrante em particular durante o desenvolvimento do projeto na semana.
+
+
+Elenilton Junior
+Houveram dificuldades para a dupla, pois não conseguimos instalar o react scripts no projeto quando o baixamos pelo github.
+
+Micael Rodrigues
+A minha dificuldade, que até acabou atrasando todo o andamento do projeto, foi em relação ao banco de dados. Iniciamos ultilizando MySQL,
+ porém sem sucesso, no fim, conseguimos ultilizando outra tecnologia.
+
+Jamily Santiago
+A minha dificuldade essa semana é relacionada a validação do formulário de adoção. Tentei adicionar o yup do formik, mas não consegui e, 
+consequentemente, não entreguei minha parte dentro do prazo.
