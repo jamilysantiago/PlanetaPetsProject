@@ -27,18 +27,15 @@ const Navbar = () => {
                <li>
                    <Link to='/'>Home</Link>
                </li>
-               {/* <li>
-                   <Link to='/'>Destaques</Link>
-               </li> */}
                <li>
                    <Link to='/adote'>Adote</Link>
                </li>
                <li>
                    <Link to='/login'>Login</Link>
                </li>
-               <li>
+               {/* <li>
                    <Link to='/perfil'>Perfil</Link>
-               </li>
+               </li> */}
            </ul>
            <div className='hamburger' onClick={handleClick}>
             {click ? (<FaTimes size={20} style={{color: '#fff'}} />) : (<FaBars size={20} style={{color: '#fff'}} />)}

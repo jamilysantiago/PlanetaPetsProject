@@ -1,107 +1,120 @@
-import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
-import Paper from '@mui/material/Paper';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import AddressForm from './AddressForm';
-import HistoricoForm from './HistoricoForm';
-import Review from './Review';
-
-const steps = ['Endereço', 'Questionário', 'Comfirmação'];
-
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddressForm />;
-    case 1:
-      return <HistoricoForm />;
-    case 2:
-      return <Review />;
-    default:
-      throw new Error('Unknown step');
-  }
-}
-
-const theme = createTheme();
-
-export default function Checkout() {
-  const [activeStep, setActiveStep] = React.useState(0);
-
-  const handleNext = () => {
-    setActiveStep(activeStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep(activeStep - 1);
-  };
-
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <AppBar
-        position="absolute"
-        color="default"
-        elevation={0}
-        sx={{
-          position: 'relative',
-          borderBottom: (t) => `1px solid ${t.palette.divider}`,
-        }}
-      >
-      
-      </AppBar>
-      <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-          <Typography component="h1" variant="h4" align="center">
-            Checkout
-          </Typography>
-          <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          {activeStep === steps.length ? (
-            <React.Fragment>
-              <Typography variant="h5" gutterBottom>
-                Sua adoção está em análise!
-              </Typography>
-              <Typography variant="subtitle1">
-                Adoção é um ato de amor! 
-              </Typography>
-            </React.Fragment>
-          ) : (
-            <React.Fragment>
-              {getStepContent(activeStep)}
-              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                {activeStep !== 0 && (
-                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-                    Voltar
-                  </Button>
-                )}
-
-                <Button
-                  variant="contained"
-                  onClick={handleNext}
-                  sx={{ mt: 3, ml: 1 }}
-                >
-                  {activeStep === steps.length - 1 ? 'Finalizar' : 'Próximo'}
-                </Button>
-              </Box>
-            </React.Fragment>
-          )}
-        </Paper>
+import '@chakra-ui/react';
+import {
+    Flex,
+    Box,
+    Center,
+    FormControl,
+    Input,
+    FormLabel,
+    HStack,
+    RadioGroup,
+    Radio,
+    Button,
+  } from '@chakra-ui/react';
   
-      </Container>
-    </ThemeProvider>
-  );
-}
+  function Form() {
+    return (
+      <Box h="100vh">
+        {/* <Center
+          as="header"
+          h={150}
+          bg="teal.500"
+          color="white"
+          fontWeight="bold"
+          fontSize="4xl"
+          pb="8"
+        >
+          Formulário
+        </Center>  */}
+        <Flex
+          align="center"
+          justify="center"
+          bg="blackAlpha.200"
+          h="calc(100vh - 150px)"
+        >
+          <Center
+            w="100%"
+            maxW={840}
+            bg="white"
+            
+            position="absolute"
+            borderRadius={5}
+            p="6"
+            boxShadow="0 1px 2px #ccc"
+          >
+            <FormControl display="flex" flexDir="column" gap="4">
+              <HStack spacing="4">
+                <Box w="100%">
+                  <FormLabel htmlFor="nome">Nome Completo</FormLabel>
+                  <Input id="nome" />
+                </Box>
+                <Box w="100%">
+                  <FormLabel htmlFor="email">E-mail</FormLabel>
+                  <Input id="email" type="email" />
+                </Box>
+              </HStack>
+              <HStack spacing="4">
+                <Box w="100%">
+                  <FormLabel htmlFor="nasc">Data de Nascimento</FormLabel>
+                  <Input id="nasc" type="date" />
+                </Box>
+                <Box w="100%">
+                  <FormLabel htmlFor="natural">Naturalidade</FormLabel>
+                  <Input id="natural" />
+                </Box>
+              </HStack>
+              <HStack spacing="4">
+                <Box w="100%">
+                  <FormLabel htmlFor="cel">Celular</FormLabel>
+                  <Input id="cel" type="number" />
+                </Box>
+                <Box w="100%">
+                  <FormLabel htmlFor="Tefone">Telefone</FormLabel>
+                  <Input id="Tefone" type="number" />
+                </Box>
+              </HStack>
+              <HStack spacing="4">
+                <Box w="100%">
+                  <FormLabel htmlFor="endereco">Endereço</FormLabel>
+                  <Input id="endereco" />
+                </Box>
+                <Box w="100%">
+                  <FormLabel htmlFor="cidade">Cidade</FormLabel>
+                  <Input id="cidade" />
+                </Box>
+              </HStack>
+              <HStack spacing="4">
+                <Box w="100%">
+                  <FormLabel>Sexo</FormLabel>
+                  <RadioGroup defaultValue="Masculino">
+                    <HStack spacing="24px">
+                      <Radio value="Masculino">Masculino</Radio>
+                      <Radio value="Feminino">Feminino</Radio>
+                      <Radio value="Outro">Outro</Radio>
+                    </HStack>
+                  </RadioGroup>
+                </Box>
+              </HStack>
+              <HStack justify="center">
+                <Button
+                  w={240}
+                  p="6"
+                  type="submit"
+                  bg="teal.600"
+                  color="white"
+                  fontWeight="bold"
+                  fontSize="xl"
+                  mt="2"
+                  _hover={{ bg: "teal.800" }}
+                >
+                  Enviar
+                </Button>
+              </HStack>
+            </FormControl>
+          </Center>
+        </Flex>
+      </Box>
+    );
+  }
+  
+  export default Form;
