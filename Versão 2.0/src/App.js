@@ -6,6 +6,7 @@ import Home from './routes/Home';
 import Adote from './routes/Adote';
 import Login from './routes/Login';
 import Cadastro from './routes/Cadastro';
+import Perfil from './routes/Perfil';
 import useAuth from "../src/components/Form/useAuth";
 import { AuthProvider } from "../src/components/Form/auth";
 
@@ -23,10 +24,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/adote' element={<Adote />} />
-        <Route path='/login' element={<Login />} />
-        <Route path="*" element={<Login />} />
-        <Route path='/cadastro' element={<Cadastro />} />
         <Route exact path="/adoteform" element={<Private Item={AdoteformCards} />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/cadastro' element={<Cadastro />} />
+        <Route exact path="/perfil" element={<Private Item={Perfil} />} />
       </Routes>
       </AuthProvider>
     </>

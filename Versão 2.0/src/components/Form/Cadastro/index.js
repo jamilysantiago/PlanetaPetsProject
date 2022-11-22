@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "../Input";
 import Button from "../Button";
 import * as C from "./styles";
@@ -6,6 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../useAuth";
 
 const Signup = () => {
+
+  useEffect(() => {
+    if(localStorage.getItem('users_bd')){
+      navigate("/");
+    }
+  },[])
+
   const [email, setEmail] = useState("");
   const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");

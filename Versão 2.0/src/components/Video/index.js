@@ -15,7 +15,7 @@ const Video = () => {
                 <p>Adoção é um ato de amor</p>
                 <div>
                     <Link to='/adote' className='btn'>Adote</Link>
-                    <Link to='/login' className='btn '>Login</Link>
+                    <Link to='/login' className='btn'>Login</Link>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 .profile{
     display: flex;
+    background-color: white;
 }
 
 .profileRight{
@@ -39,6 +40,7 @@
 
 .profileInfoName{
     font-size: 24px;
+    color: black;
 }
 
 .profileInfoDesc{
@@ -48,3 +50,4 @@
 .profileRightBottom{
     display: flex;
 }
+
