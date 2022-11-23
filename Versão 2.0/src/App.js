@@ -7,6 +7,7 @@ import Adote from './routes/Adote';
 import Login from './routes/Login';
 import Cadastro from './routes/Cadastro';
 import Perfil from './routes/Perfil';
+import About from './routes/Sobre';
 import useAuth from "../src/components/Form/useAuth";
 import { AuthProvider } from "../src/components/Form/auth";
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route exact path="/perfil" element={<Private Item={Perfil} />} />
+        <Route path='/sobre' element={<About />} />
       </Routes>
       </AuthProvider>
     </>
