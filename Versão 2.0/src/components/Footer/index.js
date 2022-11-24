@@ -6,6 +6,10 @@ import {Link} from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons';
 
 const Footer = () => {
+    const currentYear = (new Date().getFullYear())
+    const yearTxt = currentYear === 2022 ? "2022" : "2022 - "+currentYear
+
+
     return (
         <div className='footer'>
             <div className='footer-container'>
@@ -16,6 +20,7 @@ const Footer = () => {
                     <h4>Planeta Pets</h4>
                     <p>Adoção é uma escolha de amor.</p>
                     <SocialIcon className="social" url="https://github.com/idev-company" /> 
+                    <br /> <span className='span'>© { yearTxt } Serviço - Desenvolvido pela Idev Company</span>
                 </div>
                 
             </div>

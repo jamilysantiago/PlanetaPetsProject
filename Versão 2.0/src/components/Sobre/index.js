@@ -2,7 +2,7 @@ import { Fragment, React, useState } from 'react';
 import './About.css';
 
 const About = () => {
-const [ toggleTab, setToggleTab ] = useState(1)
+const [ toggleTab, setToggleTab ] = useState(3)
 const toggleState = (index) => {
     setToggleTab(index)
 }
@@ -20,107 +20,27 @@ const toggleState = (index) => {
 
                     <div className='column'>
                         <div className='tabs'>
-                            
-                            <div className={toggleTab === 1 ? "single-tab active-tab": "single-tab"}
-                            onClick = {() => toggleState(1)}
-                            >
-                                <h2>About</h2>
-                            </div>
-
-                            <div className={toggleTab === 2 ? "single-tab active-tab": "single-tab"}
-                            onClick = {() => toggleState(2)}
-                            >
-                                <h2>Skills</h2>
-                            </div>
-
                             <div className={toggleTab === 3 ? "single-tab active-tab": "single-tab"}
                             onClick = {() => toggleState(3)}
                             >
-                                <h2>Experience</h2>
+                                <h2>Sobre Nós</h2>
                             </div>
 
                         </div>
 
                         <div className='tab-content'>
-
-                            {/* About Content */}
-                            <div className={toggleTab === 1 ? "content active-content":"content"}>
-                                <h2>My Story</h2>
-                                <p>Enredo: designa a história da narrativa. Dependendo de como a trama é contada, ele é classificado em dois tipos: enredo linear (sequência cronológica) e enredo não linear (não possui uma sequência cronológica).</p>
-                                <h3>Responsive About Us Page On React Js | Switch Tab In React Js | About Us Page | React Js Tutorial</h3>
-                                <p>Narrador: também chamado de foco narrativo, representa a "voz do texto", ou seja, determina quem está contando a história. Os tipos de narrador são: narrador observador (não faz parte da história, sendo somente um observador), narrador personagem (faz parte da história) e narrador onisciente (conhece todos os detalhes da narração).</p>
-                            </div>
-
-                            {/* Skills Content */}
-                            <div className={toggleTab === 2 ? "content active-content":"content"}>
-                                <h2>Skills</h2>
-                                <p>Narrador: também chamado de foco narrativo, representa a "voz do texto", ou seja, determina quem está contando a história. Os tipos de narrador são: narrador observador (não faz parte da história, sendo somente um observador), narrador personagem (faz parte da história) e narrador onisciente (conhece todos os detalhes da narração).</p>
-
-                                <div className='skills-row'>
-                                    <div className='skills-column'>
-                                        <div className='progress-wrap'>
-                                            <h3>Developer</h3>
-                                            <div className='progress'>
-                                                <div className='progress-bar'>
-                                                    <span>80%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='skills-column'>
-                                        <div className='progress-wrap'>
-                                            <h3>Designer</h3>
-                                            <div className='progress'>
-                                                <div className='progress-bar Designer'>
-                                                    <span>90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='skills-column'>
-                                        <div className='progress-wrap'>
-                                            <h3>Javascript</h3>
-                                            <div className='progress'>
-                                                <div className='progress-bar Javascript'>
-                                                    <span>85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='skills-column'>
-                                        <div className='progress-wrap'>
-                                            <h3>PhotoShop</h3>
-                                            <div className='progress'>
-                                                <div className='progress-bar PhotoShop'>
-                                                    <span>88%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                          {/* Experience Context */}
                             <div className={toggleTab === 3 ? "content active-content":"content"}>
                                 <div className='exp-column'>
-                                    <h3>Web Developer</h3>
-                                    <span>2014-2022</span>
-                                    <p>Personagens: são aqueles que fazem parte da história e podem ser: personagens principais (protagonista e antagonista) ou personagens secundárias (adjuvante ou coadjuvante).</p>
+                                    <h3>Projeto Planeta Pets</h3>
+                                    <span>Adoção é uma escolha de amor</span>
+                                    <p>Quem não ama cachorros e gatos? Um animalzinho em casa é uma amizade para vida toda! A convivência com pets traz inúmeros benefícios para as pessoas, como: vinculo afetivo, mais alegria em casa e união na família. Mas o maior benefício que a adoção de animais pode nos trazer é a luta contra o abandono. Segundo a Organização Mundial da Saúde (OMS), somente no Brasil, cerca de 30 milhões de animais estão em situação de abandono, sendo aproximadamente 20 milhões de cães e 10 milhões de gatos. Então, nos da Planeta Pets Project estamos aqui para combater o abandono de animais e ajudar você a encontrar um amigo para toda vida.</p>
                                 </div>
 
                                 <div className='exp-column'>
-                                    <h3>Graphic Designer</h3>
-                                    <span>2015-2022</span>
-                                    <p>Personagens: são aqueles que fazem parte da história e podem ser: personagens principais (protagonista e antagonista) ou personagens secundárias (adjuvante ou coadjuvante).</p>
-                                </div>
-
-                                <div className='exp-column'>
-                                    <h3>PhotoShop</h3>
-                                    <span>2017-2022</span>
-                                    <p>Personagens: são aqueles que fazem parte da história e podem ser: personagens principais (protagonista e antagonista) ou personagens secundárias (adjuvante ou coadjuvante).</p>
+                                    <h3>Olá, somos a Idev Company! </h3>
+                                    <span>Idea Developer - 2022</span>
+                                    <p>Somo uma empresa criado em 2022 por jovens do Instituto Federal de Educação, Ciência e Tecnologia do Ceará | Campus Fortaleza, onde o nosso lema é "Sempre Buscando e Projetando Ideias!" Seja ela qual for.</p>
                                 </div>
                             </div>
                         </div>

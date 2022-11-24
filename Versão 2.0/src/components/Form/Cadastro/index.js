@@ -37,7 +37,7 @@ const Signup = () => {
       return;
     }
 
-    alert("Usuário cadatrado com sucesso!");
+    alert("Usuário cadatrado com sucesso! Por Favor, faça o seu login no sistema.");
     navigate("/login");
   };
 

@@ -1,6 +1,19 @@
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .about{
-    padding: 5rem 3rem 3rem 3rem;
+    padding: 2rem 2rem 2rem 2rem;
     background: #f8f8f8;
+    margin-bottom: -98px;
 }
 
 .row{
@@ -38,16 +51,19 @@
     background-position: center center;
     height: 600px;
     width: 100%;
+    animation: myAnim 3s ease 0s 1 normal forwards;
 }
 
 .content{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     display: none;
+    animation: myAnim 3s ease 0s 1 normal forwards;
 }
 
 .active-content{
     display: block;
+    animation: myAnim 3s ease 0s 1 normal forwards;
 }
 
 .active-tab{
