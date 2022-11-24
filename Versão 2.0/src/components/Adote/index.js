@@ -23,6 +23,7 @@ function Adote() {
 
 const handleClick=()=>{
   console.log(GalleryData.map((item) => item.name));
+  // localStorage.setItem() para criar um novo par de chave: valor;
 }
 
   return (
@@ -39,8 +40,8 @@ const handleClick=()=>{
         <div className="galleryContainer">
           {
             data.map((item) => <div key={item.id} className="galleryItem">
-              <button onClick={handleClick} className="button">
-              <img src={item.image} /></button>
+               <Link to='/adoteform'>
+              <img src={item.image} /></Link>
             </div>)
           }
         </div>

@@ -11,15 +11,30 @@ const Video = () => {
             <video autoPlay loop muted id='video'>
                 <source src={spaceVideo} type='video/mp4' />
             </video>
-                <div className='content-video'>
-                    <h1>Planeta Pets</h1>
-                    <p>Adoção é um ato de amor</p>
-                    <div className='btns'>
-                        <Link to='/adote' className='btn'>Adote</Link>
-                        <Link to='/login' className='btn'>Login</Link>
-                    </div>
-                </div>
+            <div className='content-video'>
+                {
+                    localStorage.getItem('users_bd') ?
+                        <>
+                            <h1>Planeta Pets</h1>
+                            <p>Adoção é um ato de amor</p>
+                            <div className='btns'>
+                                <Link to='/adote' className='btn'>Adote</Link>
+                                <Link to='/perfil' className='btn'>Perfil</Link>
+                            </div>
+                        </>
+                        :
+                        <>
+                            <h1>Planeta Pets</h1>
+                            <p>Adoção é um ato de amor</p>
+                            <div className='btns'>
+                                <Link to='/adote' className='btn'>Adote</Link>
+                                <Link to='/login' className='btn'>Login</Link>
+                            </div>
+                        </>
+                }
+
             </div>
+        </div>
     )
 }
 

@@ -1,213 +1,79 @@
-import '@chakra-ui/react';
-import {
-  Flex,
-  Box,
-  Center,
-  FormControl,
-  Input,
-  FormLabel,
-  HStack,
-  RadioGroup,
-  Radio,
-  Button,
-} from '@chakra-ui/react';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Input from "./Input";
+import Button from "./Button";
+import * as C from "./styles";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "./useAuth";
 
-function Form() {
+const Signup = () => {
 
-  const [user, setUser] = useState({
-    name: '',
-    email: '',
-    ed: '',
-    city: ''
-  });
-
-  const [status, setStatus] = useState({
-    type: '',
-    mensagem: ''
-  });
-
-  //Receber os dados do formulário
-  const valueInput = e => setUser({ ...user, [e.target.name]: e.target.value });
-
-  //Enviar os dados para o back-end
-  const addUser = async e => {
-    e.preventDefault();
-
-    if (!validate()) return;
-
-    const saveDataForm = true;
-
-    if (saveDataForm) {
-      setStatus({
-        type: 'success',
-        mensagem: "Usuário cadastrado com sucesso!"
-      });
-      setUser({
-        name: '',
-        email: '',
-        ed: '',
-        city: ''
-      });
-    } else {
-      setStatus({
-        type: 'error',
-        mensagem: "Erro: Usuário não cadastrado com sucesso!"
-      });
+  useEffect(() => {
+    if(localStorage.getItem('users_bd')){
+      navigate("/");
     }
-  }
+  },[])
 
-  function validate() {
-    if (!user.name) return setStatus({ type: 'error', mensagem: 'Erro: Necessário preencher o campo nome!' });
-    if (!user.email) return setStatus({ type: 'error', mensagem: 'Erro: Necessário preencher o campo e-mail!' });
-    if (!user.ed) return setStatus({ type: 'error', mensagem: 'Erro: Necessário preencher o campo Endereço!' });
-    if (!user.city) return setStatus({ type: 'error', mensagem: 'Erro: Necessário preencher o campo Cidade!' });
+  const [email, setEmail] = useState("");
+  const [emailConf, setEmailConf] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-    return true;
-  }
+  const { signup } = useAuth();
+
+  const handleSignup = () => {
+    if (!email | !emailConf | !senha) {
+      setError("Preencha todos os campos");
+      return;
+    } else if (email !== emailConf) {
+      setError("Os e-mails não são iguais");
+      return;
+    }
+
+    const res = signup(email, senha);
+
+    if (res) {
+      setError(res);
+      return;
+    }
+
+    alert("Usuário cadatrado com sucesso! Por Favor, faça o seu login no sistema.");
+    navigate("/login");
+  };
 
   return (
-    <>
-      <Box h="180vh">
-        <Flex
-          align="center"
-          justify="center"
-          bg="blackAlpha.100"
-          h="calc(180vh - 150px)">
-          <Center
-            w="100%"
-            maxW={840}
-            bg="white"
-
-            position="absolute"
-            borderRadius={5}
-            p="6"
-            boxShadow="0 1px 2px #ccc">
-
-            {status.type === 'success' ? <p style={{ color: "green" }}>{status.mensagem}</p> : ""}
-            {status.type === 'error' ? <p style={{ color: "#ff0000" }}>{status.mensagem}</p> : ""}
-
-            <FormControl display="flex" flexDir="column" gap="4" onSubmit={addUser}>
-              <HStack spacing="4">
-                <Box w="100%">
-                  <FormLabel htmlFor="nome">Nome*</FormLabel>
-                  <Input type="text" name="name" placeholder="Informe seu Nome Completo" onChange={valueInput} value={user.name} />
-
-                </Box>
-                <Box w="100%">
-                  <FormLabel htmlFor="email">E-mail*</FormLabel>
-                  <Input type="email" name="email" placeholder="exemplo@exemplo.com.br" onChange={valueInput} value={user.email} />
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%">
-                  <FormLabel htmlFor="nasc">Data de Nascimento</FormLabel>
-                  <Input type="date" name='date' />
-                </Box>
-                <Box w="100%">
-                  <FormLabel htmlFor="natural">Naturalidade</FormLabel>
-                  <Input id="natural" type="natural" name="natural" />
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%">
-                  <FormLabel htmlFor="cel">Celular</FormLabel>
-                  <Input type="number" name="telephone" placeholder="(xx) xxxx-xxxx" />
-                </Box>
-                <Box w="100%">
-                  <FormLabel htmlFor="Tefone">Telefone</FormLabel>
-                  <Input type="number" name='telefone' placeholder="(xx) xxxx-xxxx" />
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%">
-                  <FormLabel htmlFor="endereco">Endereço*</FormLabel>
-                  <Input type="text" name='endereco' placeholder="Ex: Av. Treze de Maio, 2081 - Benfica" onChange={valueInput} value={user.ed} />
-                </Box>
-                <Box w="100%">
-                  <FormLabel htmlFor="cidade">Cidade*</FormLabel>
-                  <Input type="text" name='cidade' placeholder="Ex: Fortaleza - CE" onChange={valueInput} value={user.city}/>
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-
-                <Box w="100%">
-                  <FormLabel>É a primeira vez que você adota um Pet?</FormLabel>
-                  <RadioGroup>
-                    <HStack spacing="24px" id='q1' name='q1' >
-                      <Radio value="sim">Sim</Radio>
-                      <Radio value="não">Não</Radio>
-                    </HStack>
-                  </RadioGroup>
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%" >
-                  <FormLabel>Você possui experiência com cuidado de animais?</FormLabel>
-                  <RadioGroup>
-                    <HStack spacing="24px" id='q2' name='q2'>
-                      <Radio value="Sim">Sim</Radio>
-                      <Radio value="Não">Não</Radio>
-                    </HStack>
-                  </RadioGroup>
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%" >
-                  <FormLabel>Você mora em:</FormLabel>
-                  <RadioGroup>
-                    <HStack spacing="24px" id='q3' name='q3'>
-                      <Radio value="casa">Casa</Radio>
-                      <Radio value="apartamento">Apartamento</Radio>
-                      <Radio value="outro">Outro</Radio>
-                    </HStack>
-                  </RadioGroup>
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%" >
-                  <FormLabel>Você mora sozinho(a)?</FormLabel>
-                  <RadioGroup>
-                    <HStack spacing="24px" id='q4' name='q4' >
-                      <Radio value="Sim">Sim</Radio>
-                      <Radio value="Não">Não</Radio>
-                    </HStack>
-                  </RadioGroup>
-                </Box>
-              </HStack>
-              <HStack spacing="4">
-                <Box w="100%" >
-                  <FormLabel>Está ciente sobre a responsabilidade ao realizar a adoção?</FormLabel>
-                  <RadioGroup>
-                    <HStack spacing="24px" id='q5' name='q5' >
-                      <Radio value="Sim">Sim</Radio>
-                      <Radio value="Não">Não</Radio>
-                    </HStack>
-                  </RadioGroup>
-                </Box>
-              </HStack>
-              <HStack justify="center">
-                <Button
-                onClick={validate}
-                  w={240}
-                  p="6"
-                  type="submit"
-                  bg="teal.600"
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="xl"
-                  mt="2"
-                  _hover={{ bg: "teal.800" }}
-                >
-                  Enviar
-                </Button>
-              </HStack>
-            </FormControl>
-          </Center>
-        </Flex>
-      </Box>
-    </>
+    <C.Container>
+      <C.Label>LOGIN</C.Label>
+      <C.Content>
+        <Input
+          type="email"
+          placeholder="Digite seu E-mail"
+          value={email}
+          onChange={(e) => [setEmail(e.target.value), setError("")]}
+        />
+        <Input
+          type="email"
+          placeholder="Confirme seu E-mail"
+          value={emailConf}
+          onChange={(e) => [setEmailConf(e.target.value), setError("")]}
+        />
+        <Input
+          type="password"
+          placeholder="Digite sua Senha"
+          value={senha}
+          onChange={(e) => [setSenha(e.target.value), setError("")]}
+        />
+        <C.labelError>{error}</C.labelError>
+        <Button Text="Inscrever-se" onClick={handleSignup} />
+        <C.LabelSignin>
+          Já tem uma conta?
+          <C.Strong>
+            <Link to="/login">&nbsp;Entre</Link>
+          </C.Strong>
+        </C.LabelSignin>
+      </C.Content>
+    </C.Container>
   );
-}
+};
 
-export default Form;
+export default Signup;
