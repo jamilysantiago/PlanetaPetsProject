@@ -43,7 +43,7 @@ const Signup = () => {
 
   return (
     <C.Container>
-      <C.Label>LOGIN</C.Label>
+      <C.Label>Cadastro</C.Label>
       <C.Content>
         <Input
           type="email"

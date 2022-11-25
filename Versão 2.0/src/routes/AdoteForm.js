@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import AdoteformCards from '../components/AdoteForm'
+import AdoteformCards from '../components/AdoteForm/index'
 import HeroImage from '../components/HeroImage'
 import NavBar from '../components/NavBar'
 import { ChakraProvider } from '@chakra-ui/react'

@@ -2,19 +2,19 @@ export const GalleryData = [
     {
         id:1,
         titile:"Gatos",
-        image:"./images/C1.jpg",
+        image:"./images/C1.jpeg",
         name: "Haraldo"
     },
     {
         id:2,
         titile:"Gatos",
-        image:"./images/C2.jpg",
+        image:"./images/C2.jpeg",
         name: "Dolly"
     },
     {
         id:3,
         titile:"Gatos",
-        image:"./images/C3.jpg",
+        image:"./images/C3.jpeg",
         name: "Rita"
     },
     {
