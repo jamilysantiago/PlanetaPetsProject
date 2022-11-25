@@ -18,8 +18,16 @@ const Footer = () => {
                 </div>
                 <div className='right'>
                     <h4>Planeta Pets</h4>
-                    <p>Adoção é uma escolha de amor.</p>
+                    <p>Adoção é uma escolha de amor.</p> 
+                    <div id='socialmedia'>
                     <SocialIcon className="social" url="https://github.com/idev-company" /> 
+                    .
+                    <SocialIcon className='social' url='https://www.instagram.com/'/>
+                    .
+                    <SocialIcon className='social' url='https://pt-br.facebook.com/'/>
+                    .
+                    <SocialIcon className='social' url='https://twitter.com/'/>
+                    </div>
                     <br /> <span className='span'>© { yearTxt } Serviço - Desenvolvido pela Idev Company</span>
                 </div>
                 
